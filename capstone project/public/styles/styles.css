@@ -1,0 +1,176 @@
+html,body{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;  
+}
+nav{
+    height:80px;
+    width: 100%;
+    background-color: rgb(94, 161, 244);
+    display: flex;
+    align-items: center;
+}
+#circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#circle:hover{
+    background-color: rgba(208, 205, 205, 0.358);
+}
+#circle:active{
+    background-color:  rgba(145, 141, 141, 0.358);
+}
+svg{
+    cursor: pointer;
+    height: 25px;
+    width:25px;
+}
+header svg{
+    margin: 0 4px;
+    padding: 12px;
+    display: flex;
+}
+.readingblog{
+    padding: 7px;
+    border: solid 1px;
+    border-color: #000000;
+    width: 70%;
+    box-shadow: 1px 1px 1px rgb(192, 191, 191);
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 30px;
+}
+.more{
+    display: none;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    height: 100vh;
+    font-family: sans-serif;
+    box-shadow: 1px 1px 4px 0.5px rgb(203, 203, 203);
+    transition: 0.5s ease-in-out;
+    overflow-x: hidden;
+}
+.element{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: black;
+}
+.sidebar a{
+    color: rgb(134, 128, 128);
+    font-size: 0.9rem;
+    padding-left: 10px;
+}
+
+.openwindow{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    display: none;
+    
+}
+.window{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.staticbackdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.338);
+}
+.modalwindow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 35%;
+    box-shadow: 2px 2px 5px 2px rgb(199, 199, 199);
+    z-index: 10000;
+    background-color: white;
+}
+.invisiblecontent{
+    visibility: hidden;
+    
+}
+.mainwindow{
+    width: 90%;
+    height: 90%;
+    border: solid 1px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    box-sizing: border-box;
+    
+}
+.mainwindow:hover{
+    border: none;
+}
+input[type=text]{
+    border: none;
+    outline: none;
+    border-bottom: solid 3px rgb(79, 145, 244);
+    width: 100%;
+}
+#counter p{
+    color: grey;
+}
+#counter{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    height: 30px;
+}
+.windowbuttons{
+    display: flex;
+    height: 80%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.strip{
+    display: flex;
+    height: 60px;
+}
+input[type=submit],
+input[type=button]{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+input[type=submit]:active{
+    background-color: rgba(105, 190, 243, 0.349);
+}
+input[type=button]:active{
+    background-color: rgba(105, 190, 243, 0.349);
+}
+.container{
+    display: flex;
+   
+}
+#text{
+
+    resize: none;
+}

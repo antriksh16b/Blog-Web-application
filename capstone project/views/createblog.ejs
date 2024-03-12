@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="window">
+      <div class="modalwindow">
+        <div class="mainwindow">
+          <form action="/write" method="post" id="modalform">
+            <h2>Choose a name for your blog</h2>
+            <p>This is a title for your blog</p>
+            <div>
+               <label for="title">Title</label>
+               <br>
+               <input type="text" name="title" id="titlevalue" maxlength="100" oninput="inputChanged()">
+            </div>
+            <div class="strip">
+              <p id="requiredtitle"></p>
+              <div id="counter">
+              <p><span id="count">0</span>/100</p>
+              </div>
+            </div>
+            <div class="windowbuttons">
+               <input type="button" value="CANCEL" name="cancel" onclick="closeWindow()">
+               <input type="submit" value="NEXT"  id="submitbutton"> 
+            </div>   
+          </form>  
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("submitbutton").addEventListener("click",function(event){
+      event.preventDefault();
+      if(document.getElementById("titlevalue").value.trim()===""){
+           document.getElementById("requiredtitle").innerHTML="Required";
+           return;
+      }
+      document.getElementById("modalform").submit();
+});
+    </script>
+</body>
+</html>
